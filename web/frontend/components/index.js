@@ -1,2 +1,2 @@
-export { ProductsCard } from "./ProductsCard";
+export { LocationsCard } from "./LocationsCard";
 export * from "./providers";

@@ -25,7 +25,6 @@ export default function Routes({ pages }) {
   return (
     <ReactRouterRoutes>
       {routeComponents}
-      <Route path="/Tarifas" element={<NotFound />} />
       <Route path="*" element={<NotFound />} />
     </ReactRouterRoutes>
   );

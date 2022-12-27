@@ -12,7 +12,8 @@ import { TitleBar } from "@shopify/app-bridge-react";
 
 import { trophyImage } from "../assets";
 
-import { ProductsCard } from "../components";
+import { LocationsCard } from "../components";
+
 
 export default function HomePage() {
   return (
@@ -31,22 +32,7 @@ export default function HomePage() {
                 <TextContainer spacing="loose">
                   <Heading>Shipping for eCommerce</Heading>
                   <p>
-                   La app ya esta lista, incluye todo lo necesario para empezar incluyendo el{" "}
-                    <Link url="https://polaris.shopify.com/" external>
-                      Polaris design system
-                    </Link>
-                    ,{" "}
-                    <Link url="https://shopify.dev/api/admin-graphql" external>
-                      Shopify Admin API
-                    </Link>
-                    , y el{" "}
-                    <Link
-                      url="https://shopify.dev/apps/tools/app-bridge"
-                      external
-                    >
-                      App Bridge
-                    </Link>{" "}
-                    UI library y components.
+                  Aplicación desarrollada por eCloud Solutions para administrar las tarifas de envíos de RedPack.
                   </p>
                 </TextContainer>
               </Stack.Item>
@@ -63,7 +49,7 @@ export default function HomePage() {
           </Card>
         </Layout.Section>
         <Layout.Section>
-          <ProductsCard />
+          <LocationsCard />
         </Layout.Section>
       </Layout>
     </Page>

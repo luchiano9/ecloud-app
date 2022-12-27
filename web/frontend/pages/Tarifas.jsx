@@ -1,21 +1,30 @@
-import { Card, EmptyState, Page } from "@shopify/polaris";
+import { Card, EmptyState, Heading, Page, Stack, TextContainer } from "@shopify/polaris";
 import { notFoundImage } from "../assets";
 
 export default function NotFound() {
+
   return (
     <Page>
-      <Card>
-        <Card.Section>
-          <EmptyState
-            heading="There is no page at this address"
-            image={notFoundImage}
-          >
-            <p>
-              Pagina de lucho
-            </p>
-          </EmptyState>
-        </Card.Section>
-      </Card>
+      <Stack>
+        <Stack.Item >
+          <TextContainer spacing="loose">
+            <Heading> Zonas de envío</Heading>
+            <p>Las zonas de envío son los lugares a donde se envían<br />
+            los productos. Se pueden agrupar países y regiones <br/> 
+            dentro de zonas de envío las cuales<br/>
+             tengan la misma tarifa.</p>
+          </TextContainer>
+        </Stack.Item>
+        <Stack.Item fill>
+          <Card>
+            <Card.Section>
+              <p>
+                Zonas de envío
+              </p>
+            </Card.Section>
+          </Card>
+        </Stack.Item>
+      </Stack>
     </Page>
   );
 }

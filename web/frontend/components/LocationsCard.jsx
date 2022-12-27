@@ -8,12 +8,15 @@ import {
 } from "@shopify/polaris";
 import { Toast } from "@shopify/app-bridge-react";
 import { useAppQuery, useAuthenticatedFetch } from "../hooks";
+import { useNavigate } from '@shopify/app-bridge-react';
 
-export function ProductsCard() {
+export function LocationsCard() {
   const emptyToastProps = { content: null };
   const [isLoading, setIsLoading] = useState(true);
   const [toastProps, setToastProps] = useState(emptyToastProps);
   const fetch = useAuthenticatedFetch();
+
+  const navigate = useNavigate();
 
   const {
     data,
@@ -60,17 +63,18 @@ export function ProductsCard() {
           onAction: handlePopulate,
           loading: isLoading,
         }}
-       >
-        
+      >
+
         <TextContainer spacing="loose">
           <p>
-            Ubicaciones disponibles
+            Desde donde envias tus productos. Por cada ubicación podes customizar las zonas de envío y las tarifas segun las preferencias.
           </p>
           <Heading element="h4">
             UBICACIONES
-            <DisplayText size="medium">
-              <TextStyle variation="strong">
-                {isLoadingCount ? "-" : data.count}
+            <DisplayText size="small">
+              <TextStyle>
+                Antonio Dovalí Jaime no. 70
+                Antonio Dovalí Jaime no. 70, 2, Santa Fe, Ciudad de México, Mexico, 01376
               </TextStyle>
             </DisplayText>
           </Heading>
@@ -81,11 +85,10 @@ export function ProductsCard() {
         sectioned
         primaryFooterAction={{
           content: "Administrar tarifas",
-          onAction: handlePopulate,
+          onAction: () => navigate('/Tarifas'),
           loading: isLoading,
         }}
-       >
-        <a href="/Tarifas">holi</a>
+      >
       </Card>
     </>
   );
