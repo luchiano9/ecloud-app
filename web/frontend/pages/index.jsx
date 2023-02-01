@@ -10,7 +10,7 @@ import {
 } from "@shopify/polaris";
 import { TitleBar } from "@shopify/app-bridge-react";
 
-import { trophyImage } from "../assets";
+import { redpack } from "../assets";
 
 import { LocationsCard } from "../components";
 
@@ -39,7 +39,7 @@ export default function HomePage() {
               <Stack.Item>
                 <div style={{ padding: "0 20px" }}>
                   <Image
-                    source={trophyImage}
+                    source={redpack}
                     alt="Nice work on building a Shopify app"
                     width={120}
                   />

@@ -1,0 +1,34 @@
+query{
+  deliveryProfile(id:"gid://shopify/DeliveryProfile/96784679217"){
+  	profileLocationGroups{
+      locationGroupZones(first:1){
+        edges{
+          node{
+           methodDefinitions(first:10){
+            edges{
+              node{
+                name
+                rateProvider{
+                  ... on DeliveryRateDefinition{
+                    price{
+                      amount
+                    }
+                  }
+                }
+                methodConditions{
+                  operator
+                  conditionCriteria{
+                    ... on Weight{
+                      value
+                    }
+                  }
+                }
+              }
+            }
+          }
+          }
+        }
+      }
+    }
+  }
+}
